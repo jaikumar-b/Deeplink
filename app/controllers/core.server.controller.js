@@ -3,11 +3,15 @@
 /**
  * Module dependencies.
  */
+
+var deeplink = require('node-deeplink');
+
 exports.index = function(req, res) {
 	res.render('index', {
 		user: req.user || null,
 		request: req
 	});
+};
 
 exports.deeplink = deeplink({
     fallback: 'http://google.com',
